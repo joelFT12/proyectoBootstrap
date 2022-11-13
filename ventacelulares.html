@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <title>Ventacelulares</title>
+  <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <header class="row m-lg-0 shadow mb-0">
+    <div class="col bg-primary ">
+      <nav class="navbar navbar-dark navbar-expand-lg py-lg-0 mx-0 ">
+        <div class="container-fluid">
+          <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+
+          <a class="navbar-brand d-none d-lg-block border-0" href="#">
+            <i class="bi bi-megaphone-fill"></i>
+            Tienda CellPhone</a>
+          <div class="container-fluid col-10 col-sm-6 position-relative">
+            <form class="d-flex  d-lg-block " role="search">
+              <div class="input-group-text position-absolute top-0 start-0 rounded-5 bg-danger border-0 ms-3"
+                id="btnGroupAddon" style="z-index: 100"><i class="bi bi-search text-muted"></i></div>
+              <input class="form-control me-2 ps-5 rounded-5 col-auto bg-danger border-0"  type="search" placeholder="Search"
+                aria-label="Search" />
+            </form>
+          </div>
+
+
+          <div class="offcanvas offcanvas-start text-bg-dark bg-primary" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header justify-content-center">
+
+              <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">
+                <i class="bi bi-megaphone-fill me-2"></i>Tienda CellPhone
+              </h5>
+
+            </div>
+            <div class="offcanvas-start">
+              <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 pe-3 text-center">
+                <li class="nav-item col-xs py-2">
+                  <a class="nav-link active d-lg-none border-bottom border-top border-opacity-25 " aria-current="page"
+                    href="#">Inicio</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link border-bottom border-opacity-25" href="#" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Nuevo Anuncio</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link border-bottom border-opacity-25" href="#">Carrito</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link border-bottom border-opacity-25" href="#">Estadisticas</a>
+                </li>
+
+                <li class="nav-item ms-4">
+                  <a class="nav-link d-none d-lg-block btn btn-secondary text-light" href="#">Inicio</a>
+                </li>
+                <li class="nav-item ms-4">
+                  <a class="nav-link d-none d-lg-block btn btn-secondary text-light" href="#">Estadisticas</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link d-none d-lg-block ms-3 text-light " href="#">
+
+                    <i class="bi bi-plus-circle-fill opacity-75 fs-1" type="button" data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"></i>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link d-none d-lg-block ms-3 text-light" href="#">
+                    <div class=" position-relative">
+                      <i class="bi bi-cart-plus-fill opacity-75 fs-1  position-relative">
+                      </i>
+                      <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-secondary">
+                        1+
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="offcanvas-header justify-content-center">
+                    <button type="button" class="btn-close btn-close-white mt-2" data-bs-dismiss="offcanvas"
+                      aria-label="Close"></button>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-fluid mt-3">
+    <!-- contenedores de precio, fecha, filtro para moviles, cards de los moviles y paginacion -->
+    <div class="row">
+      <!-- aside lateral de opciones multiplas -->
+      <div class="col  Scroll d-none d-lg-block  col-sm-3 col-xl-2 ">
+        <div class="form-check form-switch pt-4 ms-3">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+          <label class="form-check-label" for="flexSwitchCheckDefault">Nuevo</label>
+        </div>
+        <!-- marca -->
+        <fieldset class="border p-2 mt-3">
+          <legend class="float-none w-auto p-2 font-monospace fs-5 text-primary">
+            Marca
+          </legend>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="Samsung" />
+              <label class="form-check-label stretched-link" for="Samsung">Samsung</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="Huawei" />
+              <label class="form-check-label stretched-link" for="Huawei">Huawei</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="Nokia" />
+              <label class="form-check-label stretched-link" for="Nokia">Nokia</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="iPhone" />
+              <label class="form-check-label stretched-link" for="iPhone">iPhone</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="Xiomi" />
+              <label class="form-check-label stretched-link" for="Xiomi">Xiomi</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <!-- sistema -->
+        <fieldset class="border p-2 mt-3">
+          <legend class="float-none w-auto p-2 font-monospace fs-5 text-primary">
+            Sistema
+          </legend>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="Android" />
+              <label class="form-check-label stretched-link" for="Android">Android</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="Windows" />
+              <label class="form-check-label stretched-link" for="Windows">Windows</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="Ios" />
+              <label class="form-check-label stretched-link" for="Ios">
+                Ios</label>
+            </li>
+          </ul>
+        </fieldset>
+        <!-- pantalla -->
+        <fieldset class="border p-2 mt-3">
+          <legend class="float-none w-auto p-2 font-monospace fs-5 text-primary">
+            Pantalla
+          </legend>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="sei" />
+              <label class="form-check-label stretched-link" for="sei">6.0</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="fivep" />
+              <label class="form-check-label stretched-link" for="fivep">5.5</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="fives" />
+              <label class="form-check-label stretched-link" for="fives">5</label>
+            </li>
+          </ul>
+        </fieldset>
+
+      </div>
+
+      <div class="col">
+        <!-- contenedores de precio y filtro para tamaño desktop y movil -->
+        <div class="row">
+          <!-- contenedor del precio -->
+          <div class="col col-10 col-lg-6 d-none d-lg-block mx-2">
+
+            <div class="input-group mb-1 bg-success p-3 rounded-2 ">
+
+              <span class="input-group-text bg-secondary text-light border-0 rounded-2">Precio</span>
+
+              <input type="text" class="form-control mx-2 border-0 shadow-sm rounded-2" aria-label="" placeholder="$" />
+              <span class="input-group-text bg-secondary text-light border-0 rounded-2">Hasta</span>
+              <input type="text" class="form-control mx-2 border-0 shadow-sm rounded-2" aria-label="" placeholder="$" />
+
+            </div>
+
+
+          </div>
+          <!-- filtro de tamaño movil -->
+          <div class="col-lg-5 ">
+            <div class="input-group mb-3 mx-2 bg-success p-3 rounded-2 col-lg-2 me-5">
+              <label class="input-group-text me-2 bg-secondary text-light border-0 rounded-2" for="inputGroupSelect01">Ordenar
+                por:</label>
+
+              <input type="checkbox" class="btn-check" id="btn-check-1" checked autocomplete="off" />
+              <label class="btn btn-outline-secondary me-2 text-light rounded-2" for="btn-check-1">
+                <i class="bi bi-arrow-up"></i>
+                Precio</label>
+
+              <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off" />
+              <label class="btn btn-outline-secondary me-2 d-none d-lg-block text-light rounded-2"
+                for="btn-check-2">Fecha</label>
+
+              <div class="dropdown d-lg-none">
+                <button class="btn btn-outline-light bg-primary border-0 dropdown-toggle" type="button"
+                  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-funnel-fill"></i>
+                </button>
+                <ul class="dropdown-menu p-1  scroll-buttom " aria-labelledby="dropdownMenuButton2 ">
+                  <div class="form-check form-switch pt-4 ms-3">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Nuevo</label>
+                  </div>
+                  <fieldset class="border p-1 mt-3">
+                    <legend class="float-none w-auto p-2 font-monospace fs-5 text-primary">
+                      Marca
+                    </legend>
+                    <ul class="list-group ">
+                      <li class="list-group-item ">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="Samsung1" />
+                        <label class="form-check-label stretched-link " for="Samsung1">Samsung</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="Huawei1" />
+                        <label class="form-check-label stretched-link" for="Huawei1">Huawei</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="Nokia1" />
+                        <label class="form-check-label stretched-link" for="Nokia1">Nokia</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="iPhone1" />
+                        <label class="form-check-label stretched-link" for="iPhone1">iPhone</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="Xiomi1" />
+                        <label class="form-check-label stretched-link" for="Xiomi1">Xiomi</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="border p-2 mt-3">
+                    <legend class="float-none w-auto p-2 font-monospace fs-5 text-primary">
+                      Sistema
+                    </legend>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="Android1" />
+                        <label class="form-check-label stretched-link" for="Android1">Android</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="Windows1" />
+                        <label class="form-check-label stretched-link" for="Windows1">Windows</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="Ios1" />
+                        <label class="form-check-label stretched-link" for="Ios1">
+                          Ios</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="border p-2 mt-3">
+                    <legend class="float-none w-auto p-2 font-monospace fs-5 text-primary">
+                      Pantalla
+                    </legend>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="seis1" />
+                        <label class="form-check-label stretched-link" for="seis1">6.0</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="cinco1" />
+                        <label class="form-check-label stretched-link" for="cinco1">5.5</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="cinco01" />
+                        <label class="form-check-label stretched-link" for="cinco01">5</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+
+
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- cards de imagen de los moviles -->
+        <div class="row mx-2  Scroll" style="max-height: 80vh">
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-2">
+
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3 ">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted ">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm bg-light">
+                <a href="/ventacompra.html"> <img
+                    src="https://www.digitaltrends.com/wp-content/uploads/2014/09/apple-iphone-6-plus-review-screen-angle-2.jpg?p=1"
+                    class="card-img-top  shadow-sm " alt="..."></a>
+                <div class="card-body pb-3">
+                  <h6 class="card-title text-center fs-4">$235.00</h6>
+                  <p class="card-text fs-6 text-muted">Iphone 6 pantalla de 8 pulgadas, 64Gb internos, 2Gb de Ram, Sólo
+                    Banda Tigo, Nuevo</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+        <!-- paginacion -->
+        <div class="row container-fluid mt-4 ">
+          <nav aria-label="Page navigation example ">
+            <ul class="pagination d-sm-flex justify-content-center">
+              <li class="page-item"><a class="page-link" href="#">
+                  <!--                            <i class="bi bi-arrow-left-short"></i>-->
+                  < </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item"><a class="page-link" href="#">8</a></li>
+              <li class="page-item"><a class="page-link" href="#">
+                 
+                  >
+                </a></li>
+              <div class="input-group mb-3 mx-5 d-lg-block d-none">
+                <div class="input-group">
+                  <label class="input-text my-2 me-2" for="inputGroupSelect01">Articulos por
+                    Pagina</label>
+                  <div class="">
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option selected>25</option>
+                      <option value="1">1</option>
+                      <option value="2">5</option>
+                      <option value="3">10</option>
+                    </select>
+                  </div>
+                </div>
+            </ul>
+
+          </nav>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen ">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light border-0">
+            <h3 class="modal-title container d-flex justify-content-center " id="staticBackdropLabel">NUEVO ANUNCIO</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body bg-primary">
+            <div class="row d-flex justify-content-around ">
+
+              <!-- contenedor 1 para agregar espacificaciones -->
+              <div
+                class=" col-lg-5 col-sm-10 d-flex flex-column justify-content-baseline bg-light mb-4 rounded-2 px-4 py-4 mt-0 d-none d-lg-block">
+
+                <div class=" aling-items center ">
+
+                  <div class="mb-3 row ">
+                    <label for="inputPantalla" class="col-sm-2 col-form-label">Estado: </label>
+                    <div class="col-sm-5 pt-2">
+                      <div class="form-check form-check-inline">
+
+                        <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1">
+                        <label class="form-check-label text-muted" for="inlineRadio1"> Nuevo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                          value="option2">
+                        <label class="form-check-label text-muted" for="inlineRadio2">Usado</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                    <label for="inputMarca" class="col-sm-2 col-form-label">Marca: </label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control mx-1" id="ram" placeholder="Marca">
+                    </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                    <label for="inputModelo" class="col-sm-2 col-form-label">Modelo: </label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control mx-1" id="ram" placeholder="Modelo">
+
+                    </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                    <div class="col-sm-2">
+                      <label for="inputPantalla" class="col-sm-2 col-form-label">Pantalla: </label>
+                    </div>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" id="ram" placeholder="Pantalla">
+                    </div>
+                    <div class="col-sm-4 align-self-center">
+                      <span>Pulgadas </span>
+                    </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                    <label for="inputSis" class="col-sm-2 col-form-label">Sistema:</label>
+                    <div class="col-sm-6">
+                      <select class="form-select rounded-2 mx-1" id="sistema">
+                        <option selected>Ios</option>
+                        <option value="1">Android</option>
+                      </select>
+
+                    </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                    <div class="col-sm-2">
+                      <label for="inputPantalla" class="col-sm-2 col-form-label">Rom: </label>
+                    </div>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" id="ram" placeholder="Rom">
+                    </div>
+                    <div class="col-sm-5 align-self-center">
+                      <span>Almacenamiento interno</span>
+                    </div>
+                  </div>
+
+
+
+                  <div class="mb-3 row">
+                    <label for="inputRam" class="col-sm-2 col-form-label">RAM: </label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control mx-1" id="ram" placeholder="RAM">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- tamaño movil -->
+              <div
+                class=" col-lg-5 col-sm-10  bg-light mb-4 rounded-2 px-4 py-4 mt-0 d-block d-lg-none position-relative">
+                <img src="https://daisyui.com/images/components/carousel.jpg" class="w-100 rounded-2 " alt="...">
+                <div class="position-absolute start-50 top-50 translate-middle d-flex flex-column align-items-center">
+                  <button onclick="document.getElementById('getFile').click()"
+                    class="border-0 w-auto p-0 m-0 bg-danger ">
+                    <i class="bi bi-plus-circle-fill fs-1 text-secondary"></i>
+
+                  </button>
+
+                  <span class="text-center">Agregar<br>foto</span>
+                </div>
+
+                <input type="file" class=" " id="getFile" style="display:none">
+              </div>
+              <!-- contenedor 2 de descripcion del vendedor-->
+              <div
+                class=" col-lg-5 col-sm-10 d-flex flex-column justify-content-baseline bg-primary text-light  mb-4 rounded-2 px-4 py-4 mt-0 d-none d-lg-block ">
+                <div class="mb-3 row">
+                  <p>Titulo breve del anuncio:</p>
+                  <!-- <label for="inputMarca" class="col-sm-2 col-form-label">Titulo breve del anuncio: </label> -->
+                  <div class="col-sm-12 mb-2">
+                    <input type="text" class="form-control mx-1" id="titulo" placeholder="Titulo">
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="inputVen" class="col-sm-2 col-form-label">Vendedor: </label>
+                  <div class="col-sm-8 mb-2">
+                    <input type="text" class="form-control mx-1" id="vendedor" placeholder="Nombre">
+
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="inputTelefoo" class="col-sm-2 col-form-label">Telefono: </label>
+                  <div class="col-sm-5 mb-2">
+                    <input type="text" class="form-control mx-1" id="telefono" placeholder="1234-5678">
+                  </div>
+                </div>
+
+                <div class="mb-3  mt-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">DESCRIPCION:</label>
+                  <textarea class="form-control mt-2 mb-0 pb-0" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Descripcion del articulo"></textarea>
+                </div>
+
+              </div>
+              <!-- tamaño movil -->
+              <div
+                class=" col-lg-5 col-sm-10 d-flex flex-column justify-content-baseline bg-warning text-light  mb-4 rounded-2 px-4 py-4 mt-0 d-block d-lg-none">
+                <!-- titulo -->
+                <div class="mb-3 row">
+                  <p>Titulo breve del anuncio:</p>
+
+                  <div class="col-sm-12 mb-2">
+                    <input type="text" class="form-control mx-1" id="titulo" placeholder="Titulo">
+                  </div>
+                </div>
+
+                <!-- precio -->
+                <div class="row justify-content-center mb-1 pt-0 mt-0">
+                  <div class="col bg-light col-5 col-sm-5  py-1 mt-0 rounded-2 text-muted ">
+                    <p>Precio:</p>
+                    <div class="row justify-content-center ">
+                      <div class="col-10 pb-2 m-0 ">
+                        <input type="text" class="form-control " id="vendedor" placeholder="$000.00">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- nombre y telefono -->
+                <div class="mb-3 row mt-2">
+                  <div class="col-6">
+                    <label for="inputVen" class="col-form-label">Vendedor: </label>
+                    <input type="text" class="form-control mx-1" id="vendedor" placeholder="Nombre">
+                  </div>
+                  <div class="col-6">
+                    <label for="inputTelefoo" class=" col-form-label">Telefono: </label>
+
+                    <input type="text" class="form-control mx-1" id="telefono" placeholder="1234-5678">
+                  </div>
+                </div>
+
+                <!-- estado -->
+                <div class="mb-3 row">
+                  <div class="col-3">
+                    <label for="inputPantalla" class="col-sm-2 col-form-label">Estado: </label>
+                  </div>
+                  <div class="col-9 align-items-baseline">
+                    <div class=" pt-2 ">
+                      <div class="form-check form-check-inline ">
+
+                        <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1">
+                        <label class="form-check-label  text-light" for="inlineRadio1"> Nuevo</label>
+                      </div>
+                      <div class="form-check form-check-inline text-light">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                          value="option2">
+                        <label class="form-check-label  text-light" for="inlineRadio2">Usado</label>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- marca -->
+                <div class="mb-3 row">
+                  <div class="col-3">
+                    <label for="inputMarca" class="col-sm-2 col-form-label">Marca: </label>
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control mx-1" id="ram" placeholder="Marca">
+                  </div>
+                </div>
+
+                <!-- modelo -->
+                <div class="mb-3 row">
+                  <div class="col-3">
+                    <label for="inputModelo" class="col-sm-2 col-form-label">Modelo: </label>
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control mx-1" id="ram" placeholder="Modelo">
+                  </div>
+                </div>
+
+                <!-- pantalla-->
+                <div class="mb-3 row">
+
+
+                  <div class="col-3">
+                    <label for="inputPantalla" class="col-sm-2 col-form-label">Pantalla: </label>
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control ms-1" id="ram" placeholder="Pantalla">
+                  </div>
+                  <div class="col-4 align-self-center">
+                    <span>Pulgadas </span>
+                  </div>
+
+
+                </div>
+
+                <!-- sistema -->
+                <div class="mb-3 row mt-3">
+                  <div class="col-3">
+                    <label for="inputSis" class=" col-form-label">Sistema:</label>
+                  </div>
+                  <div class="col-4">
+                    <select class="form-select rounded-2 mx-1" id="sistema">
+                      <option selected>Ios</option>
+                      <option value="1">Android</option>
+                    </select>
+                  </div>
+
+                </div>
+
+                <!-- rom -->
+                <div class="mb-3 row">
+                  <div class="col-2">
+                    <label for="inputPantalla" class="col-sm-2 col-form-label">Rom: </label>
+                  </div>
+                  <div class="col-3">
+                    <input type="text" class="form-control ms-1" id="ram" placeholder="Rom">
+                  </div>
+                  <div class="col-5 align-self-center">
+                    <span>Almacenamiento interno</span>
+                  </div>
+                </div>
+
+                <!-- ram -->
+                <div class="mb-3 row">
+                  <label for="inputRam" class="col-2 col-form-label">RAM: </label>
+                  <div class="col-3">
+                    <input type="text" class="form-control ms-1" id="ram" placeholder="RAM">
+                  </div>
+                </div>
+
+
+                <!-- descripcion -->
+                <div class="mb-3  mt-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">DESCRIPCION:</label>
+                  <textarea class="form-control mt-2 mb-0 pb-0" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Descripcion del articulo"></textarea>
+                </div>
+                <!-- botones -->
+                <div class="modal-footer border-0  justify-content-center mt-2 col-12">
+                  <button type="button" class="btn btn-primary text-light px-4 py-3 fs-6" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle-fill me-2"></i>Cancelar</button>
+
+                  <button type="button" class="btn btn-primary text-light  px-4 py-3 fs-6" id="liveToastBtn2"
+                    data-bs-dismiss="modal">
+                    <i class="bi bi-bookmark-check-fill me-2"></i>Crear</button>
+                </div>
+
+              </div>
+              <!-- contenedor 3 para agregar imagenes  -->
+              <div
+                class=" col-lg-6 col-sm-10 d-flex flex-column justify-content-around align-items-baseline bg-light rounded-2 px-4 py-4 mt-0 d-none d-lg-block ">
+
+                <p class="fs-7">Imagenes: </p>
+                <div class="row d-flex justify-content-around">
+                  <div class="col bg-light   col-10 col-sm-1 py-3 ps-1 mt-0 me-2 rounded-2 text-muted">
+                    <div class="col-lg-2 me-4">
+                      <button onclick="document.getElementById('getFile').click()"
+                    class="border-0 w-auto p-0 m-0 bg-danger ">
+                    <i class="bi bi-plus-circle-fill fs-1 text-secondary"></i>
+
+                  </button>
+                      <i class="bi bi-dash-circle-fill  fs-1 text-secondary" type="button"></i>
+                    </div>
+                  </div>
+
+                  <div class="col bg-light col-10 col-sm-4  ms-3 mt-0 py-3 rounded-2 text-muted">
+                    <table class="table table-borderless table-sm fs-7 text-muted">
+                      <thead>
+                        <tr>
+                          <th scope="col">N</th>
+                          <th scope="col">Tamaño</th>
+                          <th scope="col">Tipo</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>145 kb</td>
+                          <td>jpg</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>145 kb</td>
+                          <td>png</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>145 kb</td>
+                          <td>png</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>145 kb</td>
+                          <td>jpg</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="col bg-light col-10 col-sm-4 ms-0 py-3 px-0 mt-0  rounded-2 text-muted">
+                    <img src="https://www.mobilereviewnepal.com/wp-content/uploads/2022/09/iPhone-14-Pro-Max-Camera.jpg"
+                      class=" rounded float-end img-thumbnail " alt="..." width="200">
+                  </div>
+                </div>
+
+              </div>
+              <!-- contenedor 4 botones-->
+              <div
+                class=" col-lg-4 col-sm-10 d-flex flex-column justify-content-baseline bg-primary  mb-4 rounded-2 px-4 py-4 mt-0 d-none d-lg-block ">
+                <div class="row justify-content-center mb-5 pt-0 mt-0">
+                  <div class="col bg-light col-12 col-sm-5  py-3 px-3 mt-0 rounded-2 text-muted ">
+                    <p>Precio:</p>
+                    <div class="row justify-content-center ">
+                      <div class="col-sm-8 pb-1 ">
+                        <input type="text" class="form-control " id="vendedor" placeholder="$000.00">
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="modal-footer border-0  justify-content-center mt-5">
+                    <button type="button" class="btn btn-secondary text-light  px-4 py-3 fs-5" data-bs-dismiss="modal">
+                      <i class="bi bi-x-circle-fill me-2"></i>Cancelar</button>
+                    <button type="button" class="btn btn-secondary text-light  px-4 py-3 fs-5" id="liveToastBtn"
+                      data-bs-dismiss="modal">
+                      <i class="bi bi-bookmark-check-fill me-2"></i>Crear</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- notificacion de compra para movil-->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 6000">
+    <div id="liveToast" class="toast bg-dark " role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-delay="2000">
+      <div class="toast-header bg-secondary text-light">
+        <i class="bi bi-megaphone-fill"></i>
+        <strong class="me-auto ms-2">Cellphone Ebay</strong>
+        <small>hace un momento</small>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+
+      <div class="toast-body text-muted">
+        Anuncio creado con exito!
+      </div>
+    </div>
+  </div>
+
+  <!-- notificacion de compra para desktop -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 6000">
+    <div id="liveToast2" class="toast bg-dark " role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-delay="2000">
+      <div class="toast-header bg-secondary text-light">
+        <i class="bi bi-megaphone-fill"></i>
+        <strong class="me-auto ms-2">Cellphone Ebay</strong>
+        <small>hace un momento</small>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+
+      <div class="toast-body text-muted">
+        Anuncio creado con exito!
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="text-center text-lg-start bg-success  text-muted mt-5">
+    <!-- titulo del footer -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class=" d-block d-lg-block justify-content-center">
+        <span><i class="bi bi-bootstrap-fill me-2"></i>Proyecto responsive en Bootstrap </span>
+      </div>
+    </section>
+    <!-- seccion de nombres -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Integrantes:
+            </h6>
+            <p>
+              <i class="bi bi-code-square me-2"></i>Joel Eduardo Fuentes Trigueros
+            </p>
+
+            <p>
+              <i class="bi bi-code-square me-2"></i>Jose Alexander Ramirez Figueroa
+            </p>
+          </div>
+          <!-- carnets -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Carnets:
+            </h6>
+            <p>
+              FT19004
+            </p>
+            <p>
+              <br>RF18025
+            </p>
+
+          </div>
+          <!-- herramientas que usamos -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Tecnologias:
+            </h6>
+            <p>Html</p>
+            <p>Sass</p>
+            <p>Bootstrap</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- nombre de materia -->
+    <div class="text-center py-3  pb-lg-2 bg-primary">
+      <p class="text-light">FMOcc: Fundamentos de programacion en internet</p>
+    </div>
+
+  </footer>
+
+  <style>
+    .Scroll {
+      height: 80vh;
+      overflow-y: scroll;
+    }
+
+    .scroll-buttom {
+      height: 60vh;
+      overflow-y: scroll;
+    }
+  </style>
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+  </script>
+
+  <script>
+    var toastTrigger = document.getElementById('liveToastBtn')
+    var toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', function () {
+        var toast = new bootstrap.Toast(toastLiveExample)
+
+        toast.show()
+      })
+    }
+
+    var toastTrigger2 = document.getElementById('liveToastBtn2')
+    var toastLiveExample2 = document.getElementById('liveToast2')
+    if (toastTrigger) {
+      toastTrigger2.addEventListener('click', function () {
+        var toast2 = new bootstrap.Toast(toastLiveExample2)
+
+        toast2.show()
+      })
+    }
+  </script>
+
+</body>
+
+</html>

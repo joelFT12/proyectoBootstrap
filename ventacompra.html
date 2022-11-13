@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <title>Compra</title>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <header class="row m-lg-0 shadow mb-3">
+    <div class="col bg-primary ">
+      <nav class="navbar navbar-dark navbar-expand-lg py-lg-0 mx-0 ">
+        <div class="container-fluid">
+          <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+
+          <a class="navbar-brand d-none d-lg-block" href="#">
+            <i class="bi bi-megaphone-fill"></i>
+            Tienda CellPhone</a>
+          <!-- input de la barra de busqueda -->
+          <div class="container-fluid col-10 col-sm-6 position-relative">
+            <form class="d-flex  d-lg-block " role="search">
+              <div class="input-group-text position-absolute top-0 start-0 rounded-5 bg-danger border-0 ms-3"
+                id="btnGroupAddon" style="z-index: 100"><i class="bi bi-search text-muted"></i></div>
+              <input class="form-control me-2 rounded-5 ps-5 col-auto bg-danger border-0" type="search" placeholder="Search"
+                aria-label="Search" />
+            </form>
+          </div>
+
+
+
+          <!-- offcanvas-menu movil -->
+          <div class="offcanvas offcanvas-start text-bg-dark bg-primary" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header justify-content-center">
+
+              <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">
+                <i class="bi bi-megaphone-fill me-2"></i>Tienda CellPhone
+              </h5>
+
+            </div>
+            <div class="offcanvas-start">
+              <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1 pe-3 text-center">
+                <li class="nav-item col-xs py-2">
+                  <a class="nav-link active d-lg-none border-bottom border-top border-opacity-25 " aria-current="page"
+                    href="/ventacelulares.html">Inicio</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link border-bottom border-opacity-25" href="#" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Nuevo Anuncio</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link border-bottom border-opacity-25" href="#">Carrito</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link border-bottom border-opacity-25" href="#">Estadisticas</a>
+                </li>
+
+                <li class="nav-item ms-4">
+                  <a class="nav-link d-none d-lg-block btn btn-secondary text-light" href="/ventacelulares.html">Inicio</a>
+                </li>
+                <li class="nav-item ms-4">
+                  <a class="nav-link d-none d-lg-block btn btn-secondary text-light" href="#">Estadisticas</a>
+                </li>
+
+                <!-- iconos de la navbar -->
+                <li class="nav-item">
+                  <a class="nav-link d-none d-lg-block ms-3 text-light " href="#">
+                    <i class="bi bi-plus-circle-fill opacity-75 fs-1" type="button" data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-none d-lg-block ms-3 text-light" href="#">
+                    <div class=" position-relative">
+                      <i class="bi bi-cart-plus-fill opacity-75 fs-1  position-relative">
+                      </i>
+                      <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-secondary">
+                        1+
+                      </span>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <div class="offcanvas-header justify-content-center">
+                    <button type="button" class="btn-close btn-close-white mt-2" data-bs-dismiss="offcanvas"
+                      aria-label="Close"></button>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- seccion principal de carrusel y descripcion -->
+  <div class="container">
+    <section class="contenedor-main row align-items-center  ">
+      <main class="col-lg-7  pt-lg-4 pb-lg-4 col-sm-12">
+        <div id="carouselExampleIndicators" class="carousel slide shadow-sm " data-bs-ride="carousel">
+
+          <div class="carousel-inner rounded-2">
+            <div class="carousel-item active">
+              <img src="https://i.blogs.es/b313c5/pantalla_iphone_6_plus/450_1000.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.blogs.es/be1c4d/iphone_6_plus_analisis_xataka/1366_2000.jpg" class="d-block w-100"
+                alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.blogs.es/0e3e3c/iphone_6_plus_analisis_en_xataka/1366_2000.jpg" class="d-block w-100"
+                alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            class="active  m-2 p-2 rounded-circle  border-primary bg-secondary opacity-50" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" class="p-2 m-2 rounded-circle  border-primary bg-secondary opacity-50"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" class="p-2 m-2 rounded-circle  border-primary bg-secondary opacity-50"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </main>
+
+      <aside class=" col-lg-5 col-sm-10 d-flex flex-column justify-content-around align-items-baseline ">
+        <p class="fs-5 texto">Iphone 6 pantalla de 8 pulgadas, 64Gb internos,
+          2Gb de Ram, Sólo Banda Tigo, Nuevo
+        </p>
+        <h2 class=" pb-lg-4 ">$235.00</h2>
+
+        <button type="button"
+          class=" d-none d-lg-block btn btn-secondary rounded-2 px-5 py-2 fs-5 text-light shadow-sm ">Comprar</button>
+        <div class="pt-lg-4 ">
+          <div class=" rounded-3 shadow-sm my-3 ">
+            <div class="container-fluid py-1 pt-lg-3 d-flex justify-content-around gap-5">
+              <p class="text-muted ">Vendedor: Juan Perez</p>
+              <p class="text-muted">Teléfono: 7374-2312</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="col">
+        <h2 class="text-center pb-lg-4 col-12  mt-4 mb-2">DESCRIPCION</h2>
+
+      </div>
+
+      <div class="row d-flex justify-content-around mt-3 me-2">
+        <div class="col bg-info ms-4 shadow-sm col-10 col-sm-5 pt-3 pb-0 px-4 mt-0 mb-3 rounded-2 ">
+          <p>
+            Estado: Nuevo <br />
+            Marca: Iphone <br />
+            Modelo: 6 plus <br />
+            Pantalla: 7 pulgadas <br />
+            Sistema: IOS <br />
+            Rom: 64GB <br />
+            Ram: 2GB <br />
+            <br />
+           
+          </p>
+        </div>
+
+        <div class="col bg-info ms-4 shadow-sm col-10 col-sm-5 pt-3 pb-0 px-4 mt-0 mb-3 rounded-2 ">
+          <p>
+            Telefono en muy buenas condiciones, tiene dos cámaras, la caja
+            esta abierta, pero con muy poco uso, practicamente nuevo, la
+            compañia con la que estaba es Tigo, asi que el chip debe ser
+            tigo, viene con su caja original y con todos sus accesorios.
+            Puedo mandar más fotos si desea por whatsapp.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- botones flotantes -->
+  <div class="container d-flex justify-content-center gap-3 d-block d-lg-none  position-fixed bottom-0 ">
+    <a class="  text-light btn btn-secondary px-4 py-2 fs-3" href="#">Inicio</a>
+    <a class="  text-light btn btn-warning px-4 py-2 fs-3" href="#">Comprar</a>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen ">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-light border-0">
+          <h3 class="modal-title container d-flex justify-content-center" id="staticBackdropLabel">NUEVO ANUNCIO</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body bg-primary">
+          <div class="row d-flex justify-content-around ">
+
+            <!-- contenedor 1 -->
+            <div
+              class=" col-lg-5 col-sm-10 d-flex flex-column justify-content-baseline bg-light mb-4 rounded-2 px-4 py-4 mt-0 d-none d-lg-block">
+
+
+              <div class=" aling-items center ">
+
+                <div class="mb-3 row ">
+                  <label for="inputPantalla" class="col-sm-2 col-form-label">Estado: </label>
+                  <div class="col-sm-5 pt-2">
+                    <div class="form-check form-check-inline">
+
+                      <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                      <label class="form-check-label text-muted" for="inlineRadio1"> Nuevo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                      <label class="form-check-label text-muted" for="inlineRadio2">Usado</label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="inputMarca" class="col-sm-2 col-form-label">Marca: </label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control mx-1" id="ram" placeholder="Marca">
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="inputModelo" class="col-sm-2 col-form-label">Modelo: </label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control mx-1" id="ram" placeholder="Modelo">
+
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+
+
+                  <div class="col-sm-2">
+                    <label for="inputPantalla" class="col-sm-2 col-form-label">Pantalla: </label>
+                  </div>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="ram" placeholder="Pantalla">
+                  </div>
+                  <div class="col-sm-4 align-self-center">
+                    <span>Pulgadas </span>
+                  </div>
+
+
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="inputSis" class="col-sm-2 col-form-label">Sistema:</label>
+                  <div class="col-sm-6">
+                    <select class="form-select rounded-2 mx-1" id="sistema">
+                      <option selected>Ios</option>
+                      <option value="1">Android</option>
+                    </select>
+
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <div class="col-sm-2">
+                    <label for="inputPantalla" class="col-sm-2 col-form-label">Rom: </label>
+                  </div>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="ram" placeholder="Rom">
+                  </div>
+                  <div class="col-sm-5 align-self-center">
+                    <span>Almacenamiento interno</span>
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="inputRam" class="col-sm-2 col-form-label">RAM: </label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control mx-1" id="ram" placeholder="RAM">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- tamaño movil -->
+            <div class=" col-lg-5 col-sm-10  mb-4 rounded-2 px-3 py-0 mt-0 d-block d-lg-none position-relative">
+
+              <img src="https://daisyui.com/images/components/carousel.jpg" class="w-100 rounded-2 " alt="...">
+              <div class="position-absolute start-50 top-50 translate-middle d-flex flex-column align-items-center">
+                <button onclick="document.getElementById('getFile').click()" class="border-0 w-auto p-0 m-0 bg-danger ">
+                  <i class="bi bi-plus-circle-fill fs-1 text-secondary"></i>
+
+                </button>
+
+                <span class="text-center">Agregar<br>foto</span>
+              </div>
+
+              <input type="file" class=" " id="getFile" style="display:none">
+            </div>
+
+            <!-- contenedor 2 -->
+            <div class=" col-lg-5 col-sm-10 d-flex flex-column justify-content-baseline
+                    bg-primary text-light  mb-4 rounded-2 px-4 py-4 mt-0 d-none d-lg-block">
+              <div class="mb-3 row">
+                <p>Titulo breve del anuncio:</p>
+                <!-- <label for="inputMarca" class="col-sm-2 col-form-label">Titulo breve del anuncio: </label> -->
+                <div class="col-sm-12 mb-2">
+                  <input type="text" class="form-control mx-1" id="titulo" placeholder="Titulo">
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="inputVen" class="col-sm-2 col-form-label">Vendedor: </label>
+                <div class="col-sm-8 mb-2">
+                  <input type="text" class="form-control mx-1" id="vendedor" placeholder="Nombre">
+
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="inputTelefoo" class="col-sm-2 col-form-label">Telefono: </label>
+                <div class="col-sm-5 mb-2">
+                  <input type="text" class="form-control mx-1" id="telefono" placeholder="1234-5678">
+                </div>
+              </div>
+
+              <div class="mb-3  mt-3">
+                <label for="exampleFormControlTextarea1" class="form-label">DESCRIPCION:</label>
+                <textarea class="form-control mt-2 mb-0 pb-0" id="exampleFormControlTextarea1" rows="3"
+                  placeholder="Descripcion del articulo"></textarea>
+              </div>
+
+            </div>
+            <!-- tamaño movil -->
+            <div
+              class=" col-lg-5 col-sm-10 d-flex flex-column justify-content-baseline bg-warning text-light  mb-4 rounded-2 px-4 py-4 mt-0 d-block d-lg-none">
+              <!-- titulo -->
+              <div class="mb-3 row">
+                <p>Titulo breve del anuncio:</p>
+
+                <div class="col-sm-12 mb-2">
+                  <input type="text" class="form-control mx-1" id="titulo" placeholder="Titulo">
+                </div>
+              </div>
+
+              <!-- precio -->
+              <div class="row justify-content-center mb-1 pt-0 mt-0">
+                <div class="col bg-light col-5 col-sm-5  py-1 mt-0 rounded-2 text-muted ">
+                  <p>Precio:</p>
+                  <div class="row justify-content-center ">
+                    <div class="col-10 pb-2 m-0 ">
+                      <input type="text" class="form-control " id="vendedor" placeholder="$000.00">
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- nombre y telefono -->
+              <div class="mb-3 row mt-2">
+                <div class="col-6">
+                  <label for="inputVen" class="col-form-label">Vendedor: </label>
+                  <input type="text" class="form-control mx-1" id="vendedor" placeholder="Nombre">
+                </div>
+                <div class="col-6">
+                  <label for="inputTelefoo" class=" col-form-label">Telefono: </label>
+
+                  <input type="text" class="form-control mx-1" id="telefono" placeholder="1234-5678">
+                </div>
+              </div>
+
+              <!-- estado -->
+              <div class="mb-3 row">
+                <div class="col-3">
+                  <label for="inputPantalla" class="col-sm-2 col-form-label">Estado: </label>
+                </div>
+                <div class="col-9 align-items-baseline">
+                  <div class=" pt-2 ">
+                    <div class="form-check form-check-inline ">
+
+                      <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                      <label class="form-check-label  text-light" for="inlineRadio1"> Nuevo</label>
+                    </div>
+                    <div class="form-check form-check-inline text-light">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                      <label class="form-check-label  text-light" for="inlineRadio2">Usado</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- marca -->
+              <div class="mb-3 row">
+                <div class="col-3">
+                  <label for="inputMarca" class="col-sm-2 col-form-label">Marca: </label>
+                </div>
+                <div class="col-4">
+                  <input type="text" class="form-control mx-1" id="ram" placeholder="Marca">
+                </div>
+              </div>
+
+              <!-- modelo -->
+              <div class="mb-3 row">
+                <div class="col-3">
+                  <label for="inputModelo" class="col-sm-2 col-form-label">Modelo: </label>
+                </div>
+                <div class="col-4">
+                  <input type="text" class="form-control mx-1" id="ram" placeholder="Modelo">
+                </div>
+              </div>
+
+              <!-- pantalla-->
+              <div class="mb-3 row">
+
+
+                <div class="col-3">
+                  <label for="inputPantalla" class="col-sm-2 col-form-label">Pantalla: </label>
+                </div>
+                <div class="col-4">
+                  <input type="text" class="form-control ms-1" id="ram" placeholder="Pantalla">
+                </div>
+                <div class="col-4 align-self-center">
+                  <span>Pulgadas </span>
+                </div>
+
+
+              </div>
+
+              <!-- sistema -->
+              <div class="mb-3 row mt-3">
+                <div class="col-3">
+                  <label for="inputSis" class=" col-form-label">Sistema:</label>
+                </div>
+                <div class="col-4">
+                  <select class="form-select rounded-2 mx-1" id="sistema">
+                    <option selected>Ios</option>
+                    <option value="1">Android</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- rom -->
+              <div class="mb-3 row">
+                <div class="col-2">
+                  <label for="inputPantalla" class="col-sm-2 col-form-label">Rom: </label>
+                </div>
+                <div class="col-3">
+                  <input type="text" class="form-control ms-1" id="ram" placeholder="Rom">
+                </div>
+                <div class="col-5 align-self-center">
+                  <span>Almacenamiento interno</span>
+                </div>
+              </div>
+
+              <!-- ram -->
+              <div class="mb-3 row">
+                <label for="inputRam" class="col-2 col-form-label">RAM: </label>
+                <div class="col-3">
+                  <input type="text" class="form-control ms-1" id="ram" placeholder="RAM">
+                </div>
+              </div>
+
+
+              <!-- descripcion -->
+              <div class="mb-3  mt-3">
+                <label for="exampleFormControlTextarea1" class="form-label">DESCRIPCION:</label>
+                <textarea class="form-control mt-2 mb-0 pb-0" id="exampleFormControlTextarea1" rows="3"
+                  placeholder="Descripcion del articulo"></textarea>
+              </div>
+              <!-- botones -->
+              <div class="modal-footer border-0  justify-content-center mt-2 col-12">
+                <button type="button" class="btn btn-primary text-light px-4 py-3 fs-6" data-bs-dismiss="modal">
+                  <i class="bi bi-x-circle-fill me-2"></i>Cancelar</button>
+
+                <button type="button" class="btn btn-primary text-light  px-4 py-3 fs-6" id="liveToastBtn"
+                  data-bs-dismiss="modal">
+                  <i class="bi bi-bookmark-check-fill me-2"></i>Crear</button>
+              </div>
+
+            </div>
+
+            <!-- contenedor 3 -->
+            <div
+                class=" col-lg-6 col-sm-10 d-flex flex-column justify-content-around align-items-baseline bg-light rounded-2 px-4 py-4 mt-0 d-none d-lg-block ">
+
+                <p class="fs-7">Imagenes: </p>
+                <div class="row d-flex justify-content-around">
+                  <div class="col bg-light   col-10 col-sm-1 py-3 ps-1 mt-0 me-2 rounded-2 text-muted">
+                    <div class="col-lg-2 me-4">
+                      <button onclick="document.getElementById('getFile').click()"
+                    class="border-0 w-auto p-0 m-0 bg-danger ">
+                    <i class="bi bi-plus-circle-fill fs-1 text-secondary"></i>
+
+                  </button>
+                      <i class="bi bi-dash-circle-fill  fs-1 text-secondary" type="button"></i>
+                    </div>
+                  </div>
+
+                  <div class="col bg-light col-10 col-sm-4  ms-3 mt-0 py-3 rounded-2 text-muted">
+                    <table class="table table-borderless table-sm fs-7 text-muted">
+                      <thead>
+                        <tr>
+                          <th scope="col">N</th>
+                          <th scope="col">Tamaño</th>
+                          <th scope="col">Tipo</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>145 kb</td>
+                          <td>jpg</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>145 kb</td>
+                          <td>png</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>145 kb</td>
+                          <td>png</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>145 kb</td>
+                          <td>jpg</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="col bg-light col-10 col-sm-4 ms-0 py-3 px-0 mt-0  rounded-2 text-muted">
+                    <img src="https://www.mobilereviewnepal.com/wp-content/uploads/2022/09/iPhone-14-Pro-Max-Camera.jpg"
+                      class=" rounded float-end img-thumbnail " alt="..." width="200">
+                  </div>
+                </div>
+
+              </div>
+
+            <!-- contenedor 4 -->
+            <div
+              class=" col-lg-4 col-sm-10 d-flex flex-column justify-content-baseline bg-primary  mb-4 rounded-2 px-4 py-4 mt-0 d-none d-lg-block">
+              <div class="row justify-content-center mb-5 pt-0 mt-0">
+                <div class="col bg-light col-12 col-sm-5  py-3 mt-0 rounded-2 text-muted ">
+                  <p>Precio:</p>
+                  <div class="row justify-content-center ">
+                    <div class="col-sm-8 pb-1 ">
+                      <input type="text" class="form-control " id="vendedor" placeholder="$000.00">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer border-0  justify-content-center mt-5">
+                <button type="button" class="btn btn-secondary text-light px-4 py-3 fs-5" data-bs-dismiss="modal">
+                  <i class="bi bi-x-circle-fill me-2"></i>Cancelar</button>
+                <button type="button" class="btn btn-secondary text-light  px-4 py-3 fs-5" id="liveToastBtn2"
+                  data-bs-dismiss="modal">
+                  <i class="bi bi-bookmark-check-fill me-2"></i>Crear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- notificacion de compra para movil-->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 6000">
+    <div id="liveToast" class="toast bg-dark " role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-delay="2000">
+      <div class="toast-header bg-secondary text-light">
+        <i class="bi bi-megaphone-fill"></i>
+        <strong class="me-auto ms-2">Cellphone Ebay</strong>
+        <small>hace un momento</small>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+
+      <div class="toast-body text-muted">
+        Anuncio creado con exito!
+      </div>
+    </div>
+  </div>
+
+  <!-- notificacion de compra para desktop -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 6000">
+    <div id="liveToast2" class="toast bg-dark " role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-delay="2000">
+      <div class="toast-header bg-secondary text-light">
+        <i class="bi bi-megaphone-fill"></i>
+        <strong class="me-auto ms-2">Cellphone Ebay</strong>
+        <small>hace un momento</small>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+
+      <div class="toast-body text-muted">
+        Anuncio creado con exito!
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="text-center text-lg-start bg-success  text-muted mt-5">
+    <!-- titulo del footer -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class=" d-block d-lg-block justify-content-center">
+        <span><i class="bi bi-bootstrap-fill me-2"></i>Proyecto responsive en Bootstrap </span>
+      </div>
+    </section>
+    <!-- seccion de nombres -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Integrantes:
+            </h6>
+            <p>
+              <i class="bi bi-code-square me-2"></i>Joel Eduardo Fuentes Trigueros
+            </p>
+
+            <p>
+              <i class="bi bi-code-square me-2"></i>Jose Alexander Ramirez Figueroa
+            </p>
+          </div>
+          <!-- carnets -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Carnets:
+            </h6>
+            <p>
+              FT19004
+            </p>
+            <p>
+              <br>RF18025
+            </p>
+
+          </div>
+          <!-- herramientas que usamos -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Tecnologias:
+            </h6>
+            <p>Html</p>
+            <p>Sass</p>
+            <p>Bootstrap</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- nombre de materia -->
+    <div class="text-center pb-5 pt-4 px-4 pb-lg-2 bg-primary">
+      <p class="text-light">FMOcc: Fundamentos de programacion en internet</p>
+    </div>
+  </footer>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    var toastTrigger = document.getElementById('liveToastBtn')
+    var toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', function () {
+        var toast = new bootstrap.Toast(toastLiveExample)
+
+        toast.show()
+      })
+    }
+
+    var toastTrigger2 = document.getElementById('liveToastBtn2')
+    var toastLiveExample2 = document.getElementById('liveToast2')
+    if (toastTrigger) {
+      toastTrigger2.addEventListener('click', function () {
+        var toast2 = new bootstrap.Toast(toastLiveExample2)
+
+        toast2.show()
+      })
+    }
+  </script>
+</body>
+
+</html>

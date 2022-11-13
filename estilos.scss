@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Quicksand:wght@700&family=Space+Mono&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+$primary: #432874;
+$secondary: #6f42c1;
+$success: #F4F1FB;
+$info: #e2d3ff;
+$warning: #735aa3;
+$danger: #fff;
+$light: #FEFCFF ;
+$text-muted: #656565;
+$dark: #ede3ff;
+$btn-secondary:#bcaaf5;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
